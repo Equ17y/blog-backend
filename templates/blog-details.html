@@ -82,7 +82,8 @@
               </div>
               <p>{{ post.text }}</p>
               <div class="news_d_footer flex-column flex-sm-row">
-                <a href="#"><span class="align-middle mr-2"><i class="ti-heart"></i></span>
+                <a href="#"><span class="align-middle mr-2">
+                  <i class="ti-heart" style="color: red;"></i></span>
                   {% if post.likes_amount %}
                     {{ post.likes_amount }} people like this
                   {% else %}
