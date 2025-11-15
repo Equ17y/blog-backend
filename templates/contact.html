@@ -13,7 +13,7 @@
             <h1>Contact Us</h1>
             <nav aria-label="breadcrumb" class="banner-breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
               </ol>
             </nav>
@@ -58,6 +58,7 @@
           </div>
           <div class="col-md-8 col-lg-9">
             <form action="./" class="form-contact contact_form" method="post" id="contactForm" novalidate="novalidate">
+              {% csrf_token %}
               <div class="row">
                 <div class="col-lg-5">
                   <div class="form-group">
