@@ -10,8 +10,9 @@
   <section class="mb-30px">
     <div class="container">
       <div class="hero-banner"
-           style="background-image: url('{% static 'blog/img/banner/hero-banner.png' %}'); background-size: cover; background-position: center; height: 400px; position: relative;">
-        <div class="hero-banner__content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+        style="background-image: url('{% static 'blog/img/banner/hero-banner.png' %}'); background-size: cover; background-position: center; height: 400px; position: relative;">
+        <div class="hero-banner__content"
+          style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
           <h3>Tours &amp; Travels</h3>
           <h1>Amazing Places on earth</h1>
           <h4>December 12, 2018</h4>
@@ -29,7 +30,8 @@
         <div class="flex-fill" style="margin-right: 30px;">
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">
-             <img class="card-img rounded-0" src="{{ post.image_url }}" alt="{{ post.title }}">
+              <img class="card-img rounded-0" src="{{ post.image_url }}"
+                alt="{{ post.title }}">
             </div>
             <div class="blog__slide__content">
               <h3><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h3>
@@ -52,9 +54,12 @@
           <div class="single-recent-blog-post">
             <div class="thumb">
               {% if post.image_url %}
-                <img class="img-fluid" src="{{ post.image_url }}" alt="{{ post.title }}">
+              <img class="img-fluid" src="{{ post.image_url }}"
+                alt="{{ post.title }}">
               {% else %}
-                 <img class="img-fluid" src="{% static 'blog/img/banner/blog.png' %}" alt="{{ post.title }}">
+              <img class="img-fluid"
+                src="{% static 'blog/img/banner/blog.png' %}"
+                alt="{{ post.title }}">
               {% endif %}
               <ul class="thumb-info" style="max-width: 550px;">
                 <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
@@ -65,7 +70,8 @@
             <div class="details mt-20">
               <h3>{{ post.title }}</h3>
               <p>{{ post.text|truncatechars:200 }}</p>
-              <a class="button" href="{% url 'post_detail' post.slug %}">Read More <i class="ti-arrow-right"></i></a>
+              <a class="button" href="{% url 'post_detail' post.slug %}">Read More <i class="ti-arrow-right"></i>
+              </a>
             </div>
           </div>
           {% endfor %}
@@ -81,8 +87,10 @@
                       </span>
                     </a>
                   </li>
-                  <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                  <li class="page-item"><a href="#" class="page-link">2</a></li>
+                  <li class="page-item active"><a href="#"
+                    class="page-link">1</a></li>
+                  <li class="page-item"><a href="#" class="page-link">2</a>
+                  </li>
                   <li class="page-item">
                     <a href="#" class="page-link" aria-label="Next">
                       <span aria-hidden="true">
@@ -103,7 +111,9 @@
               <h4 class="single-sidebar-widget__title">Newsletter</h4>
               <div class="form-group mt-30">
                 <div class="col-autos">
-                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''"
+                  <input type="text" class="form-control"
+                    id="inlineFormInputGroup" placeholder="Enter email"
+                    onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Enter email'">
                 </div>
               </div>
@@ -111,7 +121,8 @@
             </div>
 
             <div class="single-sidebar-widget post-category-widget">
-              <h4 class="single-sidebar-widget" style="height:200px;">Здесь будет реклама</h4>
+              <h4 class="single-sidebar-widget" style="height:200px;">Здесь
+                будет реклама</h4>
             </div>
           </div>
         </div>
